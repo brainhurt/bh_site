@@ -1,0 +1,209 @@
+<!-- Declaration -->
+<!DOCTYPE html>
+<html class='home' lang="en-US">
+
+<!-- Begin Head -->
+<head>
+
+<!-- Site Specifications -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta name='description' content='Homepage of the Brainhurt Dev. Team'>
+    <meta name='author' content='Brainhurt Dev Team'>
+    <title>BrainHurt!</title>
+
+    <!-- Core CSS -->
+    <link rel='stylesheet' type='text/css' href='./web/css/main.css'>
+    
+    <!-- Page Specific CSS 
+            Note: EVERY CSS file that is loaded slows overall response time. RARELY should pages
+            require MORE THAN 1 custom CSS file. We tryna be clean, responsive, & conscise here nerds.
+            Instead, they should be piped into the Page's custom CSS file using Gulp. (e.g. 'home.css')
+    -->
+    <link rel='stylesheet' type='text/css' href='./web/css/home.css'>
+
+<!-- End Head -->
+</head>
+
+<!-- Begin Body -->
+<body>
+
+<!-- Custom Navbar -->
+<nav class='navbar fixed-top navbar-toggleable-md navbar-light bg-faded'>
+    <button class='navbar-toggler navbar-toggler-right' type='button' data-toggle='collapse' aria-expandended='false' aria-label='Toggle navigation'>
+        <span class='navbar-toggler-icon'></span>
+    </button>
+    <a class='navbar-brand' href='#'>Brainhurt Dev Team</a>
+
+    <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+        <ul calss='navbar-nav mr-auto'>
+        
+            <!-- Home, Projects, Blog, About, Contact, Credits -->
+            <li class='nav-item active'>
+                <a class='nav-link' href='#'>Home <span class='sr-only'>(current)</span></a>
+            </li>
+            
+            <li class='nav-item'>
+                <a class='nav-link' href='#/projects'>Projects</a>
+            </li>
+            
+            <li class='nav-item'>
+                <a class='nav-link' href='#/blog'>Blog</a>
+            </li>
+
+            <li class='nav-item'>
+                <a class='nav-link' href='#/credits'>Credits</a>
+            </li>
+
+            <li class='nav-item'>
+                <a class='nav-link' href='#/contact'>Contact</a>
+            </li>
+
+            <li class='nav-item dropdown'>
+                <a class='nav-link dropdown-toggle' href='#/about' id='navbarDropdownMenuLink' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>About</a>
+                <div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
+                    
+                    <!-- Alphabetical Order After @Team About Page -->
+                    <a class='dropdown-item' href='https://anderc.com'>@wchristian's Website</a>
+                    <a class='dropdown-item' href='https://danthesalmon.com'>@bltjetpack's Website</a>
+                    <a class='dropdown-item' href='https://fanboyfanboy.com'>@FanboyFanboy's Website</a>
+                    <a class='dropdown-item' href='https://tharaka.desilva.com'>@TharakaDesilva's Webiste</a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="preloader">
+        <div class="loading">
+            <h2>
+                Loading...
+            </h2>
+            <span class="progress"></span>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <ul class="scene unselectable" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15"
+            id="scene">
+            <li class="layer" data-depth="0.00">
+            </li>
+            <!-- BG -->
+
+            <li class="layer" data-depth="0.10">
+                <div class="background">
+                </div>
+            </li>
+
+            <!-- Hero -->
+
+            <li class="layer" data-depth="0.20">
+                <div class="title">
+                    <h2>
+                        BRAINHURT
+                    </h2>
+                    <span class="line"></span>
+                </div>
+            </li>
+
+            <li class="layer" data-depth="0.25">
+                <div class="sphere">
+                    <img alt="sphere" src="./web/images/sphere.png">
+                </div>
+            </li>
+
+            <li class="layer" data-depth="0.30">
+                <div class="hero">
+                    <h1 id="countdown">
+                        BrainHurt coming soon!
+                    </h1>
+
+                    <p class="sub-title">
+                        BrainHurt coming soon!
+                    </p>
+                </div>
+            </li>
+            <!-- Flakes -->
+
+            <li class="layer" data-depth="0.40">
+                <div class="depth-1 flake1">
+                    <img alt="flake" src="./web/images/d1_1.png">
+                </div>
+
+                <div class="depth-1 flake2">
+                    <img alt="flake" src="./web/images/d1_2.png">
+                </div>
+
+                <div class="depth-1 flake3">
+                    <img alt="flake" src="./web/images/d1_3.png">
+                </div>
+
+                <div class="depth-1 flake4">
+                    <img alt="flake" src="./web/images/d1_4.png">
+                </div>
+            </li>
+
+            <li class="layer" data-depth="0.50">
+                <div class="depth-2 flake1">
+                    <img alt="flake" src="./web/images/d2_1.png">
+                </div>
+
+                <div class="depth-2 flake2">
+                    <img alt="flake" src="./web/images/d2_2.png">
+                </div>
+            </li>
+
+            <li class="layer" data-depth="0.60">
+                <div class="depth-3 flake1">
+                    <img alt="flake" src="./web/images/d3_1.png">
+                </div>
+
+                <div class="depth-3 flake2">
+                    <img alt="flake" src="./web/images/d3_2.png">
+                </div>
+
+                <div class="depth-3 flake3">
+                    <img alt="flake" src="./web/images/d3_3.png">
+                </div>
+
+                <div class="depth-3 flake4">
+                    <img alt="flake" src="./web/images/d3_4.png">
+                </div>
+            </li>
+
+            <li class="layer" data-depth="0.80">
+                <div class="depth-4">
+                    <img alt="flake" src="./web/images/d4_1.png">
+                </div>
+            </li>
+
+            <li class="layer" data-depth="1.00">
+                <div class="depth-5">
+                    <img alt="flake" src="./web/images/d5_1.png">
+                </div>
+            </li>
+
+            <!-- Contact -->
+            <li class="layer" data-depth="0.20">
+                <div class="contact">
+                    <ul class="icons">
+                        <li>
+                            <a class="github" href="https://github.com/brainhurt/BrainHurt_Site" target="_blank"><i class="fa fa-github"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- 
+        Nerds Rule && /r/dataisbeautiful
+            If you're reading this, we'd love to hear the story behind how you got here! :)
+            Contact us: https://brainhurt.org/contact or team.brainhurt@gmail.com
+    -->
+</body>
+
+<!-- Javascript -->
+<script src='./web/js/site.js'></script>
+</html>

@@ -1,0 +1,20 @@
+{
+	"name":"fanboyfanboy",
+	"version":"0.0.1-alpha",
+	"authors": [
+		"Brainhurt Dev Team <team.brainhurt@gmail.com>"
+	],
+	"liscence":"MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"vendor/bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"bootstrap": "^4.0.0-beta",
+		"font-awesome": "^4.7.0"
+	}
+}
