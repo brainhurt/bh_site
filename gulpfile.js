@@ -11,8 +11,8 @@ console.log(plugins.util.env.production);	// Log to console env.mode ? productio
 
 /**********************************Set Build Variables *******************************************/
 var config = {
-	assetsDir: 'lib/',
-	nodeDir: 'node_modules/',
+	assetsDir: 'lib',
+	nodeDir: 'node_modules',
 	sassPattern: 'styles/*.scss',
 	production: !!plugins.util.env.production,
 	sourceMaps: !plugins.util.env.production
@@ -31,7 +31,6 @@ app.addStyle = function(paths, outputFilename) {
 		.pipe(gulp.dest('app/web'));
 };
 
-
 /********************************** App JS Build *******************************************/
 app.addScript = function(paths, outputFilename) {
 	gulp.src(paths)
@@ -43,29 +42,44 @@ app.addScript = function(paths, outputFilename) {
 		.pipe(gulp.dest('app/web'));
 };
 
-/**************************  Copy source->output dir ******************************/
-app.copy = function(srcFiles, outputDir) {
-	gulp.src(srcFiles)
+/********************************** Copy + Optimize Images *******************************************/
+app.copyImages = function(imagePath, outputDir) {
+	gulp.src(imagePath)
+		.pipe(plugins.imagemin())
+		.pipe(gulp.dest(outputDir));
+};
+
+/********************************** Copy index.html -> correct URL *********************************/
+app.copyHTML = function(paths, outputDir) {
+	gulp.src(paths)
+		.pipe(gulp.dest(outputDir));
+};
+
+/**************************  Copy Font Supporting Files -> Output dir ******************************/
+app.copyFonts = function(paths, outputDir) {
+	gulp.src(paths)
 		.pipe(gulp.dest(outputDir));
 };
 
 /**************************  Compile Sass & Minfiy into CSS ******************************/
 gulp.task('styles', function() {
 	app.addStyle([
-		config.nodeDir+'/bootstrap/dist/css/bootstrap.css'
+		config.nodeDir+'/bootstrap/dist/css/bootstrap.css',
+		config.assetsDir+'/lib/styles/*.css'
 	], 'main.css');
 });
 
 /************************** Compile & Minify Javascript******************************/
 gulp.task('scripts', function() {
 	app.addScript([
-		config.nodeDir+'/bootstrap/dist/js/bootstrap.js'
+		config.nodeDir+'/bootstrap/dist/js/bootstrap.js',
+		config.assetsDir+'/lib/scripts/*.js'
 	], 'site.js');
 });
 
 /********************************** Copy Fonts *******************************************/
 gulp.task('fonts', function() {
-	app.copy(
+	app.copyFonts(
 		config.nodeDir+'/font-awesome/fonts/*',
 		'app/web/fonts'
 	);
@@ -73,15 +87,15 @@ gulp.task('fonts', function() {
 
 /********************************** Optimize and Copy Images *******************************************/
 gulp.task('image-opt', function() {
-	gulp.src(config.assetsDir+'/images/*')
-		.pipe(plugins.imagemin())
-		.pipe(gulp.dest('app/web/images'));
-	
+	app.copyImages(
+		config.assetsDir+'/images/*',
+		'app/web/images'
+	);	
 });
 
 /********************************** Copy index.html *******************************************/
-gulp.task('copy-index-html', function(){
-	app.copy(
+gulp.task('copy-index-html', function() {
+	app.copyHTML(
 		config.assetsDir+'/html/**/*.html',
 		'app/'
 	);

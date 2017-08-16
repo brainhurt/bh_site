@@ -46,4 +46,16 @@ When creating a new branch, you should always target `develop` as this is our wo
 
 ## Adding New Files
 
-#### DOCUMENTATION: TODO 
+#### Adding New HTML Pages 
+Create new folder(s) for the URL path you want to create an index.html page for
+
+Example: Your `index.html` is for the page `/example` with the full path: `https:brainhurt.org/example/index.html`
+	You would create a new folder `lib/html/example` and add your index.html file there.
+	Full path would then be: `lib/html/example/index.html`
+
+#### Adding New CSS Pages
+Add your file to `lib/styles`.  
+If not page-specific CSS: Then add your CSS file as another include to the `app.addStyle()` main method in Gulpfile.js if it is not a page-specific CSS
+If it is a page-specific CSS, you will have to create another `app.addStyle()` entry inside the `styles` Gulp task (you should also have a good reason why you are doing this!!!)
+
+#### Adding New Javascript
