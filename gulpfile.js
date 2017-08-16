@@ -1,6 +1,6 @@
 /**
 * Gulpfile.js
-* Author: @Brainhurt Team
+* Author: @Brainhurt Team - original author: @fanboyfanboy
 */
 
 /********************************** Setup Section *******************************************/
@@ -11,11 +11,11 @@ console.log(plugins.util.env.production);	// Log to console env.mode ? productio
 
 /**********************************Set Build Variables *******************************************/
 var config = {
-	assetsDir: 'src/res',
-	sassPattern: 'styles/**/*.scss',
+	assetsDir: 'lib/',
+	nodeDir: 'node_modules/',
+	sassPattern: 'styles/*.scss',
 	production: !!plugins.util.env.production,
-	sourceMaps: !plugins.util.env.production,
-	bowerDir: 'vendor/bower_components'
+	sourceMaps: !plugins.util.env.production
 };
 var app = {};
 
@@ -52,23 +52,21 @@ app.copy = function(srcFiles, outputDir) {
 /**************************  Compile Sass & Minfiy into CSS ******************************/
 gulp.task('styles', function() {
 	app.addStyle([
-		config.bowerDir+'/bootstrap/dist/css/bootstrap.css',
-		config.bowerDir+'/font-awesome/css/font-awesome.css'
+		config.nodeDir+'/bootstrap/dist/css/bootstrap.css'
 	], 'main.css');
 });
 
 /************************** Compile & Minify Javascript******************************/
 gulp.task('scripts', function() {
 	app.addScript([
-		config.bowerDir+'/jquery/dist/jquery.js',
-		config.assetsDir+'/scripts/*'
+		config.nodeDir+'/bootstrap/dist/js/bootstrap.js'
 	], 'site.js');
 });
 
 /********************************** Copy Fonts *******************************************/
 gulp.task('fonts', function() {
 	app.copy(
-		config.bowerDir+'/font-awesome/fonts/*',
+		config.nodeDir+'/font-awesome/fonts/*',
 		'app/web/fonts'
 	);
 });
@@ -84,7 +82,7 @@ gulp.task('image-opt', function() {
 /********************************** Copy index.html *******************************************/
 gulp.task('copy-index-html', function(){
 	app.copy(
-		'src/**/*.html',
+		config.assetsDir+'/html/**/*.html',
 		'app/'
 	);
 });
@@ -95,6 +93,7 @@ gulp.task('clean', function() {
 	del.sync('app/web/scripts/*');
 	del.sync('app/web/fonts/*');
 	del.sync('app/web/images/*');
+	del.sync('app/**/*.html');
 });
 
 /**************************  Watch for CSS changes ******************************/
