@@ -14,7 +14,7 @@ See [CONTRIBUTING.md](/CONTRIBUTING.md).
 #### Conclusion
 As with any of our projects, our goal is knowledge. To further enhance each of our team members skills, but also to help the new guy.  Many open source software organizations have in-line comments and (maybe) some documentation; but that's about it.  There is no such thing as 'too much documentation' at Brainhurt. 
 
-"If every developer wrote 1 extra comment for every 1000 lines, how many less questions would be asked?"
+"If every developer wrote 1 extra comment for every 1000 lines of code, how many less questions would be asked?"
 
 As always, if you have any questions/comments/concerns we encourage you to contact us at: support@brainhurt.org
 
