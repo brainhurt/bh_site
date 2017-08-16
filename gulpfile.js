@@ -55,12 +55,6 @@ gulp.task('styles', function() {
 		config.bowerDir+'/bootstrap/dist/css/bootstrap.css',
 		config.bowerDir+'/font-awesome/css/font-awesome.css'
 	], 'main.css');
-
-	app.addStyle([
-		config.assetsDir+'/styles/loader.css',
-		config.assetsDir+'/styles/normalize.css',
-		config.assetsDir+'/styles/styles.css'
-	], 'home.css');
 });
 
 /************************** Compile & Minify Javascript******************************/
