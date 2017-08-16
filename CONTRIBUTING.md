@@ -2,15 +2,14 @@
 
 Thinking about contributing to Brainhurt's Website? Awesome! We just ask you follow these steps to correctly setup your development environment. 
 
-## Building Development Version
+## Building Development Brainhurt Site
 
 #### First time installation
 
 1) Install [Git](https://git-scm.com/).
 2) Install [Node.js](https://nodejs.org).
-3) Install [Bower](https://bower.io).
-4) [Clone this repository](https:/help.github.com/articles/cloning-a-repository/).
-5) Run `npm install` in that folder.
+3) [Clone this repository](https:/help.github.com/articles/cloning-a-repository/).
+4) Run `npm install` in that folder.
 
 #### Branch schema
 

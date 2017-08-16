@@ -16,5 +16,5 @@ As with any of our projects, our goal is knowledge. To further enhance each of o
 
 Thanks!
 
-Brainhurt Team
+Brainhurt Team:
 admin@brainhurt.org
