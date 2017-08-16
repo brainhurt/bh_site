@@ -38,14 +38,14 @@ When creating a new branch, you should always target `develop` as this is our wo
 - `package-lock.json`: package info, dependencies
 - `package.json`: package info, dependencies
 
-
+</br>
 
 ## Adding New Files
 
 #### Adding New HTML Pages 
 Create new folder(s) for the URL path you want to create an index.html page for
 
-Example: Your `index.html` is for the page `/example` with the full path: `https://brainhurt.org/example/index.html`
+Example: Your `index.html` is for the page `/example` with the full URL: `https://brainhurt.org/example/index.html`
 
 You would create a new folder `lib/html/example` and add your index.html file there.
 Full path for your file would then be: `lib/html/example/index.html`
@@ -58,7 +58,7 @@ If not page-specific CSS: Add your CSS file as another include to the `app.addSt
 
 If it is a page-specific CSS: Create another `app.addStyle()` entry inside the `styles` Gulp task (you should also have a good reason why you are doing this!!!)
 
-#### Adding New Javascript
+#### Adding New Javascript Files
 
 Add your file to `lib/scripts`.
 
