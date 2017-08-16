@@ -25,6 +25,7 @@ When creating a new branch, you should always target `develop` as this is our wo
 
 **`gulp --production`** will clean `app/`, then build Brainhurt.org (production mode) with Minified CSS/Javascript
 
+</br>
 
 ## Project Structure
 
