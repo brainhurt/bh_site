@@ -11,9 +11,11 @@ We will use Github for issue tracking and feature requests throughout all of our
 
 See [CONTRIBUTING.md](/CONTRIBUTING.md).
 
-#### Conclusion
+####Conclusion
 As with any of our projects, our goal is knowledge. To further enhance each of our team members skills, but also to help the new guy.  Many open source software organizations have comments, but that's about it. If you have any questions - whether it be a singe line of code or our favorite Beer - please feel free to contact us! We'd love to provide further insight.
 
 Thanks!
+
 Brainhurt Team
+
 admin@brainhurt.org
